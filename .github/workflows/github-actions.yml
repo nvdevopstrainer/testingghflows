@@ -10,7 +10,7 @@ jobs:
     - run: echo " the name of the branch is  ${{ github.ref }} and repo is ${{ github.repository }}. "
     - name: checkout repository code
       uses: actions/checkout@v4
-    - run: echo " the ${{ gtihub.repository }} repository has been cloned to the runner "
+    - run: echo " the ${{ github.repository }} repository has been cloned to the runner "
     - run: echo "the workflow is ready to test your code "
     - name: List Files in Repo
       run: | 
