@@ -5,6 +5,9 @@ jobs:
   Explore-Github_Actions:
     runs-on: ubuntu-latest
     steps:
+    - name: Demo Secrets
+      with:
+        db_password: $ {{ secrets.DB_PASSWORD }}
     - run: echo "The was autopmatically triggered by a ${{ github.event_name }} event"
     - run: echo " the job is running on ${{ runner.os }} server hosted by Github"
     - run: echo " the name of the branch is  ${{ github.ref }} and repo is ${{ github.repository }}. "
